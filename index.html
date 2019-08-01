@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        marquee {
+            margin-top: -value
+        }
+    </style>
+</head>
+
+<body style="background-color:cyan">
+    <button id="playButton" onclick="audio.play();"
+        style="transform: rotate(0deg);margin:auto;display:block;margin-top:30px">Press me to play the most awesome
+        music ever!</button>
+    <div
+        style="background:url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);margin:auto;display:block;width: 500px">
+        <marquee width="100%" scrollamount="50">
+            <h1>Welcome to my website!</h1>
+        </marquee><br>
+        <marquee direction="up" behavior="alternate">
+            <marquee scrollamount="50">
+                <h2>Hope you like it!</h2>
+            </marquee>
+
+        </marquee>
+    </div>
+    <h1 id="wip" style="transform: rotate(0deg);width: 500px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 100px">Under Construction!</h1>
+    <script>
+        var audio = new Audio('./justcantgetenough.mp3');
+        audio.addEventListener('ended', function () {
+            this.currentTime = 0;
+            this.play();
+        }, false);
+        setInterval(() => {
+            document.getElementById("playButton").style.transform =
+                `rotate(${parseInt(document.getElementById("playButton").style.transform.split("(")[1].split("deg")[0]) + (Math.random() * 5 - Math.random() * 5)}deg)`
+            document.getElementById("wip").style.transform =
+                `rotate(${parseInt(document.getElementById("wip").style.transform.split("(")[1].split("deg")[0]) + (1)}deg)`
+        }, 1)
+    </script>
+</body>
+
+</html>
