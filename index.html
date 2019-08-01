@@ -33,9 +33,9 @@
         }catch(err){}
         setInterval(() => {
             document.getElementById("playButton").style.transform =
-                `rotate(${parseInt(document.getElementById("playButton").style.transform.split("(")[1].split("deg")[0]) + (Math.random() * 5 - Math.random() * 5)}deg)`
+                `rotate(${(parseInt(document.getElementById("playButton").style.transform.split("(")[1].split("deg")[0]) + (Math.random() * 5 - Math.random() * 5)) % 360}deg)`
             document.getElementById("wip").style.transform =
-                `rotate(${parseInt(document.getElementById("wip").style.transform.split("(")[1].split("deg")[0]) + (1)}deg)`
+                `rotate(${(parseInt(document.getElementById("wip").style.transform.split("(")[1].split("deg")[0]) + (1)) % 360}deg)`
         }, 1)
     </script>
 </body>
