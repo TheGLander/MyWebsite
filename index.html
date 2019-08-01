@@ -24,18 +24,35 @@
 
         </marquee>
     </div>
-    <h1 id="wip" style="transform: rotate(0deg);width: 500px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 100px">Under Construction!</h1>
+    <div
+        style="background:url(http://www.animated-smileys.com/emoticons/animated-smileys-waving-003.gif);margin:auto;display:block;height:
+        150px;width: 500px">
+        <p id="hello" style="font-size:151px;text-align:left;margin-top:30px">Hello</p>
+    </div>
+    
+    <h1 id="wip"
+        style="transform: rotate(0deg);width: 500px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 100px">
+        Under Construction!</h1>
     <script>
         var audio = new Audio('./justcantgetenough.mp3');
         audio.loop = 1
-        try{
+        try {
             audio.play();
-        }catch(err){}
+        } catch (err) {}
+        var i = 0;
         setInterval(() => {
             document.getElementById("playButton").style.transform =
                 `rotate(${(parseInt(document.getElementById("playButton").style.transform.split("(")[1].split("deg")[0]) + (Math.random() * 5 - Math.random() * 5)) % 360}deg)`
             document.getElementById("wip").style.transform =
                 `rotate(${(parseInt(document.getElementById("wip").style.transform.split("(")[1].split("deg")[0]) + (1)) % 360}deg)`
+            if (i % 300 > 149) {
+                document.getElementById("hello").style["font-size"] =
+                    `${(parseInt(document.getElementById("hello").style["font-size"]) + 1) % 300}px`
+            }else{
+                document.getElementById("hello").style["font-size"] =
+                    `${(parseInt(document.getElementById("hello").style["font-size"]) - 1) % 300}px`
+            }
+            i++
         }, 1)
     </script>
 </body>
