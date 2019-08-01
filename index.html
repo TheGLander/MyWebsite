@@ -27,13 +27,10 @@
     <h1 id="wip" style="transform: rotate(0deg);width: 500px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 100px">Under Construction!</h1>
     <script>
         var audio = new Audio('./justcantgetenough.mp3');
+        audio.loop = 1
         try{
             audio.play();
         }catch(err){}
-        audio.addEventListener('ended', function () {
-            this.currentTime = 0;
-            this.play();
-        }, false);
         setInterval(() => {
             document.getElementById("playButton").style.transform =
                 `rotate(${parseInt(document.getElementById("playButton").style.transform.split("(")[1].split("deg")[0]) + (Math.random() * 5 - Math.random() * 5)}deg)`
