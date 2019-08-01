@@ -46,7 +46,7 @@
             url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);margin-top: 30px">
         And I think I am cool!</h1>
     <div style="margin: auto;display: block;height: 150px;width: 500px;margin-top:60px">
-        <h1 id="hobbiesMy" style="display:inline">My </h1><h1 id="hobbiesHobbies" style="display:inline">Hobbies!</h1>
+        <h1 id="hobbiesMy" style="display:inline;color: darkblue">My </h1><h1 id="hobbiesHobbies" style="display:inline;color: red">Hobbies!</h1>
     </div>
     <div style="width:500px;height:250px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 100px">
         <h1 id="wip"
@@ -73,6 +73,17 @@
             }
             i++
         }, 1)
+        var x = 0
+        setInterval(()=>{
+            x++
+            if(x % 2 == 0){
+                document.getElementById("hobbiesMy").style.color = "red"
+                document.getElementById("hobbiesHobbies").style.color = "darkblue"
+            }else{
+                document.getElementById("hobbiesMy").style.color = "darkblue"
+                document.getElementById("hobbiesHobbies").style.color = "red"
+            }
+        },750)
     </script>
 </body>
 
