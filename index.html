@@ -23,9 +23,9 @@
         <marquee width="100%" scrollamount="50">
             <h1>Welcome to my website!</h1>
         </marquee><br>
-        </div>
-        <div
-            style="background:url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);margin:auto;display:block;width: 500px;margin-top: 30px">
+    </div>
+    <div
+        style="background:url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);margin:auto;display:block;width: 500px;margin-top: 30px">
         <marquee direction="up" behavior="alternate" style="margin-top: -20px">
             <marquee scrollamount="50">
                 <h2>Hope you like it!</h2>
@@ -45,8 +45,21 @@
             auto;text-align:center;background:
             url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);margin-top: 30px">
         And I think I am cool!</h1>
-    <div style="margin: auto;display: block;height: 150px;width: 500px;margin-top:60px">
+    <div style="margin: auto;display: block;height: 50px;width: 500px;margin-top:60px;text-align: center">
         <h1 id="hobbiesMy" style="display:inline;color: darkblue">My </h1><h1 id="hobbiesHobbies" style="display:inline;color: red">Hobbies!</h1>
+    </div>
+    <div style="margin: auto;display: block;height: 150px;width: 500px;background-image:
+        url(https://ceticismo.files.wordpress.com/2008/08/brain_sleeping.gif)">
+        <h1 class="hobby" style="text-align:center;transform: rotate(35deg)">Sleeping</h1>
+    </div>
+    <div style="margin: auto;display: block;height: 150px;width: 500px;background-image:
+            url( http://www.mille-soeren.dk/07_Clipart_JPG_GIF/12_funny_computer/17_ani_pc_selvskrivende.gif)">
+        <h1 class="hobby" style="text-align:center;transform: rotate(-35deg)">Programming</h1>
+    </div>
+    <div
+        style="margin: auto;display: block;height: 150px;width: 500px;background-image:
+                    url(http://3.bp.blogspot.com/-hQ_VxSBNb90/UxZUaj2rtLI/AAAAAAAAt2c/w8dHi9Np1Kg/s1600/got-my-mouth-full-eating-smiley-emoticon.gif)">
+        <h1 class="hobby" style="text-align:center;transform: rotate(35deg)">Eating</h1>
     </div>
     <div style="width:500px;height:250px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 100px">
         <h1 id="wip"
@@ -74,16 +87,23 @@
             i++
         }, 1)
         var x = 0
-        setInterval(()=>{
+        setInterval(() => {
             x++
-            if(x % 2 == 0){
+            if (x % 2 == 0) {
                 document.getElementById("hobbiesMy").style.color = "red"
                 document.getElementById("hobbiesHobbies").style.color = "darkblue"
-            }else{
+            } else {
                 document.getElementById("hobbiesMy").style.color = "darkblue"
                 document.getElementById("hobbiesHobbies").style.color = "red"
             }
-        },750)
+            var hobbies = document.getElementsByClassName("hobby")
+            for (var y = 0; y < hobbies.length; y++) {
+                
+                    hobbies[y].style.transform = `rotate(${0 - parseInt(hobbies[y].style.transform.split("(")[1].split("deg")[0])}deg)`
+                
+                
+            }
+        }, 750)
     </script>
 </body>
 
