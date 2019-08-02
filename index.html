@@ -46,7 +46,8 @@
             url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);margin-top: 30px">
         And I think I am cool!</h1>
     <div style="margin: auto;display: block;height: 50px;width: 500px;margin-top:60px;text-align: center">
-        <h1 id="hobbiesMy" style="display:inline;color: darkblue">My </h1><h1 id="hobbiesHobbies" style="display:inline;color: red">Hobbies!</h1>
+        <h1 id="hobbiesMy" style="display:inline;color: darkblue">My </h1>
+        <h1 id="hobbiesHobbies" style="display:inline;color: red">Hobbies!</h1>
     </div>
     <div style="margin: auto;display: block;height: 150px;width: 500px;background-image:
         url(https://ceticismo.files.wordpress.com/2008/08/brain_sleeping.gif)">
@@ -98,10 +99,8 @@
             }
             var hobbies = document.getElementsByClassName("hobby")
             for (var y = 0; y < hobbies.length; y++) {
-                
-                    hobbies[y].style.transform = `rotate(${0 - parseInt(hobbies[y].style.transform.split("(")[1].split("deg")[0])}deg)`
-                
-                
+                hobbies[y].style.transform =
+                    `rotate(${0 - parseInt(hobbies[y].style.transform.split("(")[1].split("deg")[0])}deg)`
             }
         }, 750)
     </script>
