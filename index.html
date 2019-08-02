@@ -64,16 +64,29 @@
                     url(http://3.bp.blogspot.com/-hQ_VxSBNb90/UxZUaj2rtLI/AAAAAAAAt2c/w8dHi9Np1Kg/s1600/got-my-mouth-full-eating-smiley-emoticon.gif)">
         <h1 class="hobby" style="text-align:center;transform: rotate(35deg)">Eating</h1>
     </div>
-    <div style="width:500px;height:250px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 100px">
+    <div style="width: 500px;text-align:center;margin: auto;display: block;">
+        <h1
+            style="background-image: url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);font-size: 100px;text-align:center;margin-bottom: 0px">
+            A game!</h1>
+        <h1 style="text-align:center">Click the trophy!</h1>
+    </div>
+    <marquee behavior="alternate" scrollamount="130"
+        style="background: url(http://farm3.static.flickr.com/2651/3697567004_a91ebf1dd9_o.gif)"><a
+            href="javascript:wins++;alert(`You win! Win streak: ${wins}`);"><img
+                src="http://www.eastcoasttrophy.com/gold_trophy_sparkle_lg_clr.gif"></a></marquee>
+    <button style="text-align:center;margin: auto;display: block;margin-top: 20px"
+        onclick="alert(`${wins} ${wins == 1?'win':'wins'}!`)">How many wins?</button>
+    <div style="width:500px;height:250px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 250px">
         <h1 id="wip"
             style="transform: rotate(0deg);width: 300px;margin-left: auto;margin-right: auto;text-align:center">
             Under Construction!</h1>
     </div>
     <script>
+        var wins = 0;
         var audio = new Audio('./justcantgetenough.mp3');
         audio.loop = 1
         audio.play();
-        if(!audio.paused){
+        if (!audio.paused) {
             document.getElementById("playButton").parentNode.removeChild(document.getElementById("playButton"))
         }
         var i = 0;
@@ -89,6 +102,9 @@
             } else {
                 document.getElementById("hello").style["font-size"] =
                     `${(parseInt(document.getElementById("hello").style["font-size"]) - 1) % 300}px`
+            }
+            if (i >= 300) {
+                i = 0
             }
             i++
         }, 1)
