@@ -73,6 +73,9 @@
         var audio = new Audio('./justcantgetenough.mp3');
         audio.loop = 1
         audio.play();
+        if(!audio.paused){
+            document.getElementById("playButton").parentNode.removeChild(document.getElementById("playButton"))
+        }
         var i = 0;
         setInterval(() => {
             if (document.getElementById("playButton"))
