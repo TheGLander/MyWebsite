@@ -8,7 +8,7 @@
     <title>My website</title>
 </head>
 
-<body style="background-color:cyan">
+<body style="background-image: url(https://www.t-shevchenko.name/files/THSh/design/bkground.jpg)">
     <div
         style="float:left;background:url(https://farm3.static.flickr.com/2466/3696756981_7c94065bbc_o.gif);width: 300px;height: 300px">
     </div>
@@ -34,8 +34,9 @@
         </marquee>
     </div>
     <div style="background:url(http://www.animated-smileys.com/emoticons/animated-smileys-waving-003.gif);margin:auto;display:block;height:
-        150px;width: 500px;margin-top:30px">
+        150px;width: 500px;margin-top:30px;background-color:rgba(0,255,255,0.5);">
         <p id="hello" style="font-size:151px;text-align:left;margin-top:30px">Hello</p>
+    </div>
     </div>
     <h1 style="transform: rotate(0deg);width: 500px;margin-left: auto;margin-right:
             auto;text-align:center;background:
@@ -45,33 +46,45 @@
             auto;text-align:center;background:
             url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);margin-top: 30px">
         And I think I am cool!</h1>
-    <div style="margin: auto;display: block;height: 50px;width: 500px;margin-top:60px;text-align: center">
-        <h1 id="hobbiesMy" style="display:inline;color: darkblue">My <h1 id="hobbiesHobbies"
-                style="display:inline;color: red">Hobbies!</h1>
+    <div style="margin: auto;display: block;height: 50px;width: 500px;margin-top:60px;text-align: center;">
+        <h1 id="hobbiesMy" style="display:inline;color: darkblue;background-color:rgba(0,255,255,0.5);">My <h1
+                id="hobbiesHobbies" style="display:inline;color: red;background-color:rgba(0,255,255,0.5);">Hobbies!
+            </h1>
         </h1>
 
     </div>
     <div style="margin: auto;display: block;height: 150px;width: 500px;background-image:
-        url(https://ceticismo.files.wordpress.com/2008/08/brain_sleeping.gif)">
-        <h1 class="hobby" style="text-align:center;transform: rotate(35deg)">Sleeping</h1>
+        url(https://ceticismo.files.wordpress.com/2008/08/brain_sleeping.gif);">
+        <h1 class="hobby" style="text-align:center;transform: rotate(35deg);background-color:rgba(0,255,255,0.5);width: 120px;
+            margin-left: auto ;
+            margin-right: auto ;">
+            Sleeping</h1>
     </div>
     <div style="margin: auto;display: block;height: 150px;width: 500px;background-image:
             url( http://www.mille-soeren.dk/07_Clipart_JPG_GIF/12_funny_computer/17_ani_pc_selvskrivende.gif)">
-        <h1 class="hobby" style="text-align:center;transform: rotate(-35deg)">Programming</h1>
+        <h1 class="hobby" style="text-align:center;transform: rotate(-35deg);background-color:rgba(0,255,255,0.5);width: 200px;
+            margin-left: auto ;
+            margin-right: auto ;">
+            Programming</h1>
     </div>
     <div
         style="margin: auto;display: block;height: 150px;width: 500px;background-image:
                     url(http://3.bp.blogspot.com/-hQ_VxSBNb90/UxZUaj2rtLI/AAAAAAAAt2c/w8dHi9Np1Kg/s1600/got-my-mouth-full-eating-smiley-emoticon.gif)">
-        <h1 class="hobby" style="text-align:center;transform: rotate(35deg)">Eating</h1>
+        <h1 class="hobby" style="text-align:center;transform: rotate(35deg);background-color:rgba(0,255,255,0.5);width: 100px;
+            margin-left: auto ;
+            margin-right: auto ;">
+            Eating</h1>
     </div>
     <div style="width: 500px;text-align:center;margin: auto;display: block;">
         <h1
             style="background-image: url(http://farm4.static.flickr.com/3618/3697567056_45ae16f677_o.gif);font-size: 100px;text-align:center;margin-bottom: 0px">
             A game!</h1>
-        <h1 style="text-align:center">Click the trophy!</h1>
+        <h1 style="text-align:center;width:250px;background-color:rgba(0,255,255,0.5);
+        margin-left: auto ;
+            margin-right: auto ;">Click the trophy!</h1>
     </div>
-    <marquee behavior="alternate" scrollamount="130"
-        style="background: url(http://farm3.static.flickr.com/2651/3697567004_a91ebf1dd9_o.gif)"><a
+    <marquee behavior="alternate" scrollamount="130" style="background:
+        url(http://farm3.static.flickr.com/2651/3697567004_a91ebf1dd9_o.gif);background-color:rgba(0,255,255,0.5)"><a
             href="javascript:wins++;alert(`You win! Win streak: ${wins}`);"><img
                 src="http://www.eastcoasttrophy.com/gold_trophy_sparkle_lg_clr.gif"></a></marquee>
     <button style="text-align:center;margin: auto;display: block;margin-top: 20px"
@@ -96,19 +109,19 @@
             географии 2 в кино скоро</button>
     </form>
     <div style="width:500px;height:250px;margin-left: auto;margin-right: auto;text-align:center;margin-top: 250px">
-        <h1 id="wip"
-            style="transform: rotate(0deg);width: 300px;margin-left: auto;margin-right: auto;text-align:center">
+        <h1 id="wip" style="transform: rotate(0deg);width: 300px;margin-left: auto;margin-right:
+            auto;text-align:center;background-color:rgba(0,255,255,0.5)">
             Under Construction!</h1>
     </div>
     <script>
-        var wins = 0;
-        var audio = new Audio('./justcantgetenough.mp3');
+        let wins = 0;
+        let audio = new Audio('./ducktalesmoom.mp3');
         audio.loop = 1
         audio.play();
         if (!audio.paused) {
             document.getElementById("playButton").parentNode.removeChild(document.getElementById("playButton"))
         }
-        var i = 0;
+        let i = 0;
         setInterval(() => {
             if (document.getElementById("playButton"))
                 document.getElementById("playButton").style.transform =
@@ -127,7 +140,7 @@
             }
             i++
         }, 1)
-        var x = 0
+        let x = 0
         setInterval(() => {
             x++
             if (x % 2 == 0) {
@@ -138,7 +151,7 @@
                 document.getElementById("hobbiesHobbies").style.color = "red"
             }
             var hobbies = document.getElementsByClassName("hobby")
-            for (var y = 0; y < hobbies.length; y++) {
+            for (let y = 0; y < hobbies.length; y++) {
                 hobbies[y].style.transform =
                     `rotate(${0 - parseInt(hobbies[y].style.transform.split("(")[1].split("deg")[0])}deg)`
             }
